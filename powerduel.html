@@ -11,10 +11,10 @@
 		function addscore(button){
 			
 			// add score			
-			if (button == 1){
+			if (button == 1 && b1 < 5){
 				b1 = b1 + 1;
 				}
-			else if (button == 2){
+			else if (button == 2 && b2 < 5){
 				b2 = b2 + 1;
 				}
 			
@@ -43,11 +43,11 @@
 				container.innerHTML= "";	
 			}
 			
-			//check if a player has won
-			if (b1 == 5){
+			// check if a player has won
+			if (b1 >= 5){
 				victory(1);
 			}
-			else if (b2 == 5){
+			else if (b2 >= 5){
 				victory(2);
 			}
 						
@@ -62,18 +62,20 @@
 			var out = document.getElementById("header");	
 			out.innerHTML = "";	
 			}						
-		}
+		} // end of addscore
 							
 		// refresh both power pages 						
 		function refreshDiv(div){
+			if (b1 < 5 && b2 < 5){
 			var container = document.getElementById("div1");
 			var content = container.innerHTML;
 			container.innerHTML= content;					
 			var container = document.getElementById("div2");
 			var content = container.innerHTML;
 			container.innerHTML= content;	
-					
-		}	
+			}
+		}
+						
 			
 		</script>
 		<title>DUEL WITH POWERS</title>	
