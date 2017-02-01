@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--- Comments in html suck. I mean, 9 characters just to declare a comment? >_> --->
+
+<html>
+	<link rel="stylesheet" type="text/css" href="mystyle.css"></link>
+	<head>
+		<script type="text/javascript">
+		var b1 = 0;
+		var b2 = 0;
+		var r = 1;
+		function addscore(button){
+			
+			// add score			
+			if (button ==1){
+				b1 = b1 + 1;
+				}
+			else if (button == 2){
+				b2 = b2 + 1;
+				}
+			
+			r = r + 1;
+			
+			if (b1 >= 5){
+				window.location = "victory1.html";
+			}
+			else if (b2 >= 5){
+				window.location = "victory2.html";
+			}
+			
+			else {
+			// display score
+			var out = document.getElementById("round");
+			out.innerHTML = "ROUND " + r;			
+			var out = document.getElementById("score1");
+			out.innerHTML = "P1 Score: " + b1 + "/5";
+			var out = document.getElementById("score2");
+			out.innerHTML = "P2 Score: " + b2 + "/5";
+			var out = document.getElementById("header");	
+			out.innerHTML = "";	
+			}						
+		}
+							
+		// refresh both power pages 
+						
+		function refreshDiv(div){
+			var container = document.getElementById("div1");
+			var content = container.innerHTML;
+			container.innerHTML= content;					
+			var container = document.getElementById("div2");
+			var content = container.innerHTML;
+			container.innerHTML= content;	
+					
+		}	
+			
+		</script>
+		<title>DUEL WITH POWERS</title>	
+		<div>
+			<center>
+				<p id="header" style="font-family: Helvetica; font-size: 60px; color: white;">
+					<b>POWER⚡DUEL</b>
+				</p>
+								 
+				<!--- button 1 --->
+				<div type="button" id="b1" onclick="addscore(1); refreshDiv();">WINNER</div>	
+																			
+				<!--- button 2 --->
+				<div type="button" id="b2" onclick="addscore(2); refreshDiv();">WINNER</div>
+				
+				<p id="score1"></p>
+				
+				<p id="score2"></p>
+				
+				<!-- round counter -->
+				<p id ="round" style="font-family: Helvetica; color: white; font-size: 30px; text-align: center;"></p>				
+										
+				<p style="font-family: Helvetica; color: white; font-size: 30px; text-align: center;"><b>↙ ️️CHOOSE THE WINNER ↘</b></p>
+								
+			</center>
+		</div>						
+	</head>
+		<body>
+			<div id="div1"><object type="text/html" data="http://powerlisting.wikia.com/wiki/Special:random" width="590px" height="730px">
+    		</object></div>
+    		<!-- http://powerlisting.wikia.com/wiki/Special:random -->   		
+			<div id="div2"><object type="text/html" data="http://powerlisting.wikia.com/wiki/Special:random" width="590px" height="730px">
+    		</object></div>
+		</body>
+</html>
+

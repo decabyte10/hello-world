@@ -1,0 +1,96 @@
+
+body {
+	background-image: url("grade.jpg");
+}
+#score1{
+	overflow: auto;
+	font-family: Helvetica;
+	color: white;
+	font-size: 30px;
+	font-weight: bold; 
+	text-align: left;
+	margin: auto;
+	float: left;
+	padding: 15px 15px;
+}
+#score2{
+	overflow: auto;
+	font-family: Helvetica;
+	color: white;
+	font-size: 30px;
+	font-weight: bold; 
+	text-align: left;
+	margin: auto;
+	float: right;
+	padding: 15px 15px;
+}
+#b1 {
+    background-color: #FEDF00;
+    border: none;
+    padding: 15px 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 19px;
+    font-family: Helvetica;
+    float: left;
+    color: black;
+    border-radius: 12px;
+}
+#b2 {
+    background-color: #FEDF00;
+    border: none;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 19px;
+    font-family: Helvetica;
+    float: right;
+    color: black;
+    border-radius: 12px;
+}
+#div1 {
+    float: left;
+    overflow:auto;
+    border:5px ridge black;
+}
+#div2 {
+    float: right;
+    vertical-align:top;
+    overflow:auto;
+    border:5px ridge black;
+}
+#winheader{
+	overflow: auto;
+	font-family: Helvetica;
+	color: white;
+	font-size: 100px;
+	font-weight: bold; 
+	text-align: center;
+	margin: auto;
+	padding: 15px 15px;
+}
+#rpb{     
+	background-color: #FEDF00;
+    border: none;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 19px;
+    font-family: Helvetica;
+    color: black;
+    vertical-align: middle;
+    border-radius: 12px;
+}
+#rpb2{     
+	background-color: #FEDF00;
+    border: none;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 19px;
+    font-family: Helvetica;
+    color: black;
+    vertical-align: middle;
+    border-radius: 12px;
+}
