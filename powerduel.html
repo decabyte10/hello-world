@@ -13,12 +13,17 @@
 			// add score			
 			if (button == 1 && b1 < 5){
 				b1 = b1 + 1;
+				r = r + 1;
 				}
 			else if (button == 2 && b2 < 5){
 				b2 = b2 + 1;
+				r = r + 1;
 				}
+			else {
+				location.reload();
+			}
 			
-			r = r + 1;
+			
 			
 			//when a player wins, remove all elements minus a few
 			function victory(player){
@@ -32,7 +37,7 @@
 				var out = document.getElementById("b1");
 				out.innerHTML = "PLAY";
 				var out = document.getElementById("b2");
-				out.innerHTML = "AGAIN";
+				out.innerHTML = "AGAIN?";
 				var out = document.getElementById("choose");
 				out.innerHTML = "";
 				var out = document.getElementById("header");	
@@ -40,7 +45,7 @@
 				var container = document.getElementById("div1");
 				container.innerHTML= "";					
 				var container = document.getElementById("div2");
-				container.innerHTML= "";	
+				container.innerHTML= "";
 			}
 			
 			// check if a player has won
