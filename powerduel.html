@@ -11,7 +11,7 @@
 		function addscore(button){
 			
 			// add score			
-			if (button ==1){
+			if (button == 1){
 				b1 = b1 + 1;
 				}
 			else if (button == 2){
@@ -20,12 +20,30 @@
 			
 			r = r + 1;
 			
-			if (b1 >= 5){
-				window.location = "victory1.html";
+			//when a player wins, remove all elements minus a few
+			function victory(player){
+				
+				var out = document.getElementById("round");
+				out.innerHTML = "";			
+				var out = document.getElementById("score1");
+				out.innerHTML = "";
+				var out = document.getElementById("score2");
+				out.innerHTML = "";
+				var out = document.getElementById("choose");
+				out.innerHTML = "";
+				var out = document.getElementById("header");	
+				out.innerHTML = "PLAYER " + player + " WINS";	
 			}
-			else if (b2 >= 5){
-				window.location = "victory2.html";
+			
+			
+			if (b1 == 5){
+				victory(1);
 			}
+			else if (b2 == 5){
+				victory(2);
+			}
+			
+			
 			
 			else {
 			// display score
@@ -73,7 +91,7 @@
 				<!-- round counter -->
 				<p id ="round" style="font-family: Helvetica; color: white; font-size: 30px; text-align: center;"></p>				
 										
-				<p style="font-family: Helvetica; color: white; font-size: 30px; text-align: center;"><b>↙ ️️CHOOSE THE WINNER ↘</b></p>
+				<p id = "choose" style="font-family: Helvetica; color: white; font-size: 30px; text-align: center;"><b>↙ ️️CHOOSE THE WINNER ↘</b></p>
 								
 			</center>
 		</div>						
